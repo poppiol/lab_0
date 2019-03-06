@@ -53,4 +53,11 @@ public class TailsTest {
         assertThat(tails.get(tails.size() - 1), Matchers.equalTo(""));
     }
 
+    @Test
+    public void callingTalisTwiceWithSameDataShouldReturnSameResultSize() {
+        tailsGenerator.tails(HELLO);
+        tails = tailsGenerator.tails(HELLO);
+        assertThat(tails, Matchers.hasSize(HELLO.length() + 1));
+    }
+
 }
