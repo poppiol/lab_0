@@ -11,11 +11,9 @@ public class TailsGenerator {
         if (value == null) {
             return list;
         } else {
-            for (int i = 0; i < value.length(); i++) {
+            for (int i = 0; i < value.length()+1; i++) {
                 list.add(value.substring(i));
-                System.out.println(list);
             }
-            list.add("");
             return list;
         }
     }
